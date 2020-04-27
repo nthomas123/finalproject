@@ -85,7 +85,7 @@ int main()
     printf("   ##    ##     ## ##  ##  ## ##       ##    ##    ##     ## ##         ##        ##  ##       ##       .\n");
     printf("   ##     #######   ###  ###  ######## ##     ##    #######  ##         ######## #### ##       ######## .\n\n");
 
-    //customizePlayer(typeofPlayer); //Stage 1
+    customizePlayer(typeofPlayer); //Stage 1
     introduction();
     executeLook("around");
     while (getInput() && parseAndExecute())
