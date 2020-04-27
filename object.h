@@ -5,7 +5,7 @@ typedef struct object
     const char **tags;
     struct object *location;
     struct object *destination;
-    int (*condition)(struct object *);
+    //int (*condition)(struct object *);
 
     /*
     const char *details;
@@ -28,5 +28,6 @@ extern OBJECT objs[];
 #define wallCave (objs + 9)
 #define outside (objs + 10)
 #define poster (objs + 11)
+#define statue (objs + 12)
 
-#define endOfObjs (objs + 12)
+#define endOfObjs (objs + 13)

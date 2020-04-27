@@ -14,6 +14,7 @@ static const char *tags8[] = {NULL};
 static const char *tags9[] = {NULL};
 static const char *tags10[] = {"out", NULL};
 static const char *tags11[] = {"poster", NULL};
+static const char *tags12[] = {NULL};
 
 //Instances of objects in the game
 OBJECT objs[] = {
@@ -28,4 +29,5 @@ OBJECT objs[] = {
     {"Pictures of your family on the wall", tags8, yourRoom, NULL},
     {"Observation: Your home is small", tags9, livingRoom, NULL},
     {"Outside", tags10, NULL, NULL},
-    {"Poster", tags11, outside, NULL}};
+    {"Poster", tags11, outside, NULL},
+    {"Statue", tags12, outside, NULL}};
