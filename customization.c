@@ -78,16 +78,16 @@ void customizePlayer(char *str)
         player[locationOfPlayer].CostumeColorway = "Grey and Yellow";
         break;
     }
-    printf("What is your Background?\n");
-    printf("1 = Swordsman | 2 = Archer \n");
+    printf("What is your choice of weapon?\n");
+    printf("1 = Sword | 2 = Bow \n");
     scanf("%d", &temp);
     switch (temp)
     {
     case 1:
-        player[locationOfPlayer].Background = "Swordsman";
+        player[locationOfPlayer].Background = "Sword";
         break;
     case 2:
-        player[locationOfPlayer].Background = "Archer";
+        player[locationOfPlayer].Background = "Bow";
         break;
     }
 

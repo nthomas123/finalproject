@@ -2,6 +2,8 @@
 #include "object.h"
 #include "misc.h"
 
+extern char typeofPlayer[50];
+
 //Function that will move Objects in the game
 static void moveObject(const char *noun, OBJECT *from, OBJECT *to)
 {
@@ -102,7 +104,8 @@ void executeRead(const char *noun)
         printf("-----------------------------\n");
         printf("Looking for brave adventurers that are seeking to complete the the tower. \n");
         printf("Anyone who completes the tower will get one wish \n");
-        printf("To join please pick up this poster and go to the statue in the middle of the clover town\n");
+        printf("To join please pick up this poster, go to the enterance of the tower, and give the poster to the guard\n");
+        printf("Cloud: I should particpate and wish my mother to good health\n");
     }
     else
     {
@@ -118,6 +121,35 @@ void executeTalk(const char *noun)
     {
         printf("Mother: *cough cough* Hey Cloud, could you pick up some medicine for me? I am going to run out soon. \n");
         printf("Cloud: Sure thing Mother, the care taker will be here any minute. Please hang tight. \n");
+    }
+    else if (0 == (strcmp(noun, "lady")))
+    {
+        printf("NPC: Welcome to the tower of life! I will be helping you get started on this journey.  \n");
+        printf("The clover realm has existed for thousands of years. The Gods has blessed the people of this realm with the opportunity to fulfill their desires.\n");
+        printf("Many people across other towns and villages attempted to climb the tower, but was not successful\n");
+        sleep(3);
+        printf("NPC: The tower has 8 levels. For each level you will be taught some advance knowledge from another realm in “Operating System”. A little friend will be helping you on this quest.\n");
+        printf("Completing the required task for each level will allow you to level up in the world. Along the way there will be bosses you have to beat in order to advance\n");
+        printf("NPC: First things first, we need to get you a spirit, an attribute, and a weapon. Please wait patiently, I will be casting a spell on you to determine these attributes\n");
+        sleep(5);
+        printf("Spirit:\n");
+        printf("Name: SIRI\n");
+        printf("Purpose: GUIDE\n");
+        printf("\n");
+        printf("Attribute:\n");
+        printf("Name: FIRE\n");
+        printf("Purpose: MAGIC\n");
+        printf("\n");
+        printf("WEAPON:\n");
+        printf("Name: %s \n", typeofPlayer);
+        printf("Purpose: ATTACK ENEMIES\n");
+        printf("NPC: I will now transfer you to the first level. \n");
+        printf("TRANSFERING.");
+        sleep(1);
+        printf("..");
+        sleep(1);
+        printf("...");
+        sleep(1);
     }
     else
     {

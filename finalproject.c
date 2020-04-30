@@ -5,6 +5,8 @@
 #include "inventory.h"
 #include "story.h"
 
+char typeofPlayer[50];
+
 //Input for User Interaction
 static char input[100];
 
@@ -74,7 +76,6 @@ static int parseAndExecute()
 //Main function that runs the game
 int main()
 {
-    char typeofPlayer[50];
     printf("You are currently Playing:.\n");
 
     printf("########  #######  ##      ## ######## ########     #######  ########   ##       #### ######## ######## .\n");
@@ -86,6 +87,7 @@ int main()
     printf("   ##     #######   ###  ###  ######## ##     ##    #######  ##         ######## #### ##       ######## .\n\n");
 
     customizePlayer(typeofPlayer); //Stage 1
+    printf("Typeofplaye: %s \n", typeofPlayer);
     introduction();
     executeLook("around");
     while (getInput() && parseAndExecute())

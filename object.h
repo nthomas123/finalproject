@@ -5,13 +5,9 @@ typedef struct object
     const char **tags;
     struct object *location;
     struct object *destination;
-    //int (*condition)(struct object *);
-
-    /*
     const char *details;
-    const char    *textGo;
-    int            health;
-*/
+    struct object *prospect;
+    const char *textGo;
 } OBJECT;
 
 //Object Decleration
@@ -22,12 +18,16 @@ extern OBJECT objs[];
 #define mother (objs + 3)
 #define dog (objs + 4)
 #define player (objs + 5)
-#define outTheDoor (objs + 6)
-#define exitCave (objs + 7)
+#define staircase (objs + 6)
+#define exitHouse (objs + 7)
 #define wallField (objs + 8)
 #define wallCave (objs + 9)
 #define outside (objs + 10)
 #define poster (objs + 11)
-#define statue (objs + 12)
+#define Gaurd (objs + 12)
+#define tower (objs + 13)
+#define intoTower (objs + 14)
+#define exitTower (objs + 15)
+#define towerLady (objs + 16)
 
-#define endOfObjs (objs + 13)
+#define endOfObjs (objs + 17)

@@ -9,7 +9,7 @@ OBJECT *getPassageTo(OBJECT *targetLocation)
     for (obj = objs; obj < endOfObjs; obj++)
     {
         if (obj->location == player->location &&
-            obj->destination == targetLocation)
+            obj->prospect == targetLocation)
         {
             return obj;
         }
@@ -54,7 +54,7 @@ OBJECT *personHere(void)
     OBJECT *obj;
     for (obj = objs; obj < endOfObjs; obj++)
     {
-        if (distanceTo(obj) == distHere && obj == dog)
+        if (distanceTo(obj) == distHere && obj == Gaurd)
         {
             return obj;
         }
