@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "object.h"
 #include "misc.h"
+#include "story.h"
 
 extern char typeofPlayer[50];
 
@@ -122,6 +123,7 @@ void executeTalk(const char *noun)
         printf("Mother: *cough cough* Hey Cloud, could you pick up some medicine for me? I am going to run out soon. \n");
         printf("Cloud: Sure thing Mother, the care taker will be here any minute. Please hang tight. \n");
     }
+
     else if (0 == (strcmp(noun, "lady")))
     {
         printf("NPC: Welcome to the tower of life! I will be helping you get started on this journey.  \n");
@@ -150,6 +152,14 @@ void executeTalk(const char *noun)
         sleep(1);
         printf("...");
         sleep(1);
+        player->location = level1;
+    }
+    else if (0 == (strcmp(noun, "siri")))
+    {
+        if (player->location == level1)
+        {
+            level1Dialog();
+        }
     }
     else
     {

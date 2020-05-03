@@ -59,4 +59,5 @@ OBJECT objs[] = {
     {"Enterance to the tower", tags14, outside, tower, "There is a place where you can go into the portal\n", tower, "You walk into the portal"},
     {"Portal to Clover Town", tags15, tower, outside, "Details", NULL, "You have left the tower."},
     {"The Welcome Lady", tags12, tower, NULL, "Details", NULL, ""},
-};
+    {"Siri", tags12, level1, NULL, "Details", NULL, ""},
+    {"Level One", tags12, NULL, NULL, "Details", NULL, ""}};

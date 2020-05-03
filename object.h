@@ -29,5 +29,7 @@ extern OBJECT objs[];
 #define intoTower (objs + 14)
 #define exitTower (objs + 15)
 #define towerLady (objs + 16)
+#define siri (objs + 17)
+#define level1 (objs + 18)
 
-#define endOfObjs (objs + 17)
+#define endOfObjs (objs + 19)
