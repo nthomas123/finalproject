@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 #include "object.h"
-
+/*Powerpoint slides and Geeks for Geeks was used as a reference*/
 void executeHelp()
 {
     printf("This game requires you to type in an action. Bellow I have list all the commands that are available to you:\n");
@@ -18,6 +18,7 @@ void executeHelp()
     printf("-inventory: Lists the objects the player has\n");
     printf("-read <object>: Reads object specified\n");
     printf("-talk <object>: talks to person specified\n");
+    printf("-badge: lists out the badges you have earned");
 
     printf("The command 'look around' will help you if you are stuck.\n");
     printf("If you are stuck in the quiz section 'talk siri', it can help\n");
@@ -396,6 +397,7 @@ void level5Dialog()
     printf("\n Question 1:\n");
     printf("In a bakery shop, there is a numbering system that keeps track of the order of the customers.\n The baker uses this system to interact with the customer.\n");
     printf("What is the Critical Section in this analogy?\n");
+    printf("\n");
     printf("To Answer Type the corresponding number attached to the selected answer. \n");
 
     printf("1. The customer talks with the baker and tells others to wair wait\n2.When the customer gets their number\n3. All of the above.\n");
@@ -454,7 +456,7 @@ void level5Dialog()
     {
         printf("\n");
         intoLevel6->location = player->location;
-        printf("Congrates you have passed the fourth trial\n");
+        printf("Congrates you have passed the fifth trial\n");
         printf("You unlocked the “Process Badge\n");
     }
 }
@@ -479,7 +481,7 @@ void level6Dialog()
     int answer;
     printf("\n Question 1:\n");
     printf("Which algorithm is the most fairest?\n");
-    printf("1.FCFS\n2.BFS\n3. None of the above.\n");
+    printf("1.FCFS \n2.BFS \n3. None of the above.\n");
     printf("To Answer Type the corresponding number attached to the selected answer. \n");
     scanf("%d", &answer);
     if (answer == 1)
@@ -494,7 +496,7 @@ void level6Dialog()
     }
     printf("\nQuestion 2:\n");
     printf("Which algorithm minmizes wait time?\n");
-    printf("1.SJF 2.Deadlock 3.Round Robinn");
+    printf("1.SJF \n2.Deadlock \n3.Round Robinn");
 
     printf("To Answer Type the corresponding number attached to the selected answer. \n");
     scanf("%d", &answer);
@@ -534,7 +536,7 @@ void level6Dialog()
     {
         printf("\n");
         intoLevel7->location = player->location;
-        printf("Congrates you have passed the fourth trial\n");
+        printf("Congrates you have passed the sixth trial\n");
         printf("You unlocked the Schedule Badge\n");
     }
 }
@@ -652,8 +654,8 @@ void level7Dialog()
     else
     {
         printf("\n");
-        intoLevel5->location = player->location;
-        printf("Congrates you have passed the fourth trial\n");
+        intoTemple->location = player->location;
+        printf("Congrates you have passed the final trial\n");
         printf("You unlocked the Final Badge\n");
     }
 }

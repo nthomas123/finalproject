@@ -205,6 +205,7 @@ void executeTalk(const char *noun)
         printf("You are talking to no one\n");
     }
 }
+//Function that prints out the Badges earned
 void executeBadge()
 {
     for (i = 0; i < 7; i++)

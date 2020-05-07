@@ -95,7 +95,6 @@ int main()
     printf("   ##     #######   ###  ###  ######## ##     ##    #######  ##         ######## #### ##       ######## .\n\n");
 
     //customizePlayer(typeofPlayer); //Stage 1
-    //printf("Typeofplaye: %s \n", typeofPlayer);
     introduction();
     executeLook("around");
     while (getInput() && parseAndExecute())

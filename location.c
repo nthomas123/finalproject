@@ -38,7 +38,7 @@ void executeLook(const char *noun)
         }
     }
 }
-
+//Function that will move a player to the appropriate destination
 static void movePlayer(OBJECT *passage)
 {
     printf("%s", passage->textGo);
@@ -50,7 +50,7 @@ static void movePlayer(OBJECT *passage)
     }
 }
 
-//Fucntion that will execute go functions to a particular location
+//Function that will execute go functions to a particular location
 void executeGo(const char *noun)
 {
     OBJECT *obj = parseObject(noun);
