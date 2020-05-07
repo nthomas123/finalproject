@@ -1,9 +1,15 @@
 #include <stdio.h>
+
 #include "object.h"
 #include "misc.h"
 #include "story.h"
 
 extern char typeofPlayer[50];
+
+int i;
+
+char *arr[100] = {"", "", "", "", "", "", ""};
+char **ptr = arr;
 
 //Function that will move Objects in the game
 static void moveObject(const char *noun, OBJECT *from, OBJECT *to)
@@ -126,14 +132,14 @@ void executeTalk(const char *noun)
 
     else if (0 == (strcmp(noun, "lady")))
     {
-        printf("NPC: Welcome to the tower of life! I will be helping you get started on this journey.  \n");
-        printf("The clover realm has existed for thousands of years. The Gods has blessed the people of this realm with the opportunity to fulfill their desires.\n");
-        printf("Many people across other towns and villages attempted to climb the tower, but was not successful\n");
+        printf("Lady: Welcome to the tower of life! I will be helping you get started on this journey.  \n");
+        printf("Lady: The clover realm has existed for thousands of years.\nLady: The Gods has blessed the people of this realm with the opportunity to fulfill their desires.\n");
         sleep(3);
-        printf("NPC: The tower has 8 levels. For each level you will be taught some advance knowledge from another realm in “Operating System”. A little friend will be helping you on this quest.\n");
-        printf("Completing the required task for each level will allow you to level up in the world. Along the way there will be bosses you have to beat in order to advance\n");
-        printf("NPC: First things first, we need to get you a spirit, an attribute, and a weapon. Please wait patiently, I will be casting a spell on you to determine these attributes\n");
+        printf("Lady: The tower has 8 levels. For each level you will be taught some advance knowledge from another realm in “Operating System”.\n A little friend will be helping you on this quest.\n");
+        printf("Lady: Completing the required task for each level will allow you to level up in the world.\nLady: Along the way there will be bosses you have to beat in order to advance\n");
+        printf("Lady: First things first, we need to get you a spirit, an attribute, and a weapon.\nLady: Please wait patiently, I will be casting a spell on you to determine these attributes\n");
         sleep(5);
+        printf("\n");
         printf("Spirit:\n");
         printf("Name: SIRI\n");
         printf("Purpose: GUIDE\n");
@@ -145,24 +151,64 @@ void executeTalk(const char *noun)
         printf("WEAPON:\n");
         printf("Name: %s \n", typeofPlayer);
         printf("Purpose: ATTACK ENEMIES\n");
+        printf("\n");
         printf("NPC: I will now transfer you to the first level. \n");
-        printf("TRANSFERING.");
-        sleep(1);
-        printf("..");
-        sleep(1);
-        printf("...");
+        printf("TRANSFERRED");
         sleep(1);
         player->location = level1;
     }
+
     else if (0 == (strcmp(noun, "siri")))
     {
         if (player->location == level1)
         {
             level1Dialog();
+            ptr[0] = "Intro Badge";
         }
+        if (player->location == level2)
+        {
+            level2Dialog();
+            ptr[1] = "Struct Badge";
+        }
+        if (player->location == level3)
+        {
+            level3Dialog();
+            ptr[2] = "Process Badge";
+        }
+        if (player->location == level4)
+        {
+            level4Dialog();
+            ptr[3] = "Thread Badge";
+        }
+        if (player->location == level5)
+        {
+            level5Dialog();
+            ptr[4] = "Sync Badge";
+        }
+        if (player->location == level6)
+        {
+            level6Dialog();
+            ptr[5] = "Schedule Badge";
+        }
+        if (player->location == level7)
+        {
+            level7Dialog();
+            ptr[6] = "Final Badge";
+        }
+    }
+    else if (0 == (strcmp(noun, "zeus")))
+    {
+        finalDialog();
     }
     else
     {
         printf("You are talking to no one\n");
+    }
+}
+void executeBadge()
+{
+    for (i = 0; i < 7; i++)
+    {
+        printf("Badge %d : %s\n", i + 1, ptr[i]);
     }
 }

@@ -65,6 +65,14 @@ static int parseAndExecute()
         {
             executeTalk(noun);
         }
+        else if (strcmp(verb, "help") == 0)
+        {
+            executeHelp();
+        }
+        else if (strcmp(verb, "badge") == 0)
+        {
+            executeBadge();
+        }
         else
         {
             printf("What are you talking about how to '%s'.\n", verb);
@@ -87,7 +95,7 @@ int main()
     printf("   ##     #######   ###  ###  ######## ##     ##    #######  ##         ######## #### ##       ######## .\n\n");
 
     //customizePlayer(typeofPlayer); //Stage 1
-    printf("Typeofplaye: %s \n", typeofPlayer);
+    //printf("Typeofplaye: %s \n", typeofPlayer);
     introduction();
     executeLook("around");
     while (getInput() && parseAndExecute())

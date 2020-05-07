@@ -13,7 +13,7 @@ struct playerCustomize
     const char *Background;
 
 } player[] = {
-    {"Black", "Bulky", "Warrior", "Black and Blue", "Swordsman"}};
+    {"Black", "Bulky", "Warrior", "Black and Blue", "Swords"}};
 static unsigned locationOfPlayer = 0;
 
 int temp;
@@ -24,6 +24,7 @@ void customizePlayer(char *str)
     printf("*******Customize Your Character*******\n");
     printf("Before you get started on playing the game, please customize your player.\n");
     printf("Note: Once You Customize your player, you can not change it\n\n");
+    printf("Please respond with the corresponding number 1 or 2.\n\n");
     printf("What Color is your hair?\n");
     printf("1 = Black | 2 = Brown \n");
     scanf("%d", &temp);
@@ -35,6 +36,8 @@ void customizePlayer(char *str)
     case 2:
         player[locationOfPlayer].Haircolor = "Brown";
         break;
+    default:
+        printf("I don't understand what you enter. Your hair will be Black");
     }
 
     printf("What your build?\n");
@@ -48,6 +51,8 @@ void customizePlayer(char *str)
     case 2:
         player[locationOfPlayer].Build = "Buff";
         break;
+    default:
+        printf("I don't understand what you enter. Your build is bulky.\n");
     }
 
     printf("What Costume are you wearing?\n");
@@ -61,6 +66,8 @@ void customizePlayer(char *str)
     case 2:
         player[locationOfPlayer].Costume = "Magician";
         break;
+    default:
+        printf("I don't understand what you enter. You will be wearing a warrior costume.\n");
     }
 
     printf("What is the colorway of your costume?\n");
@@ -77,6 +84,8 @@ void customizePlayer(char *str)
     case 3:
         player[locationOfPlayer].CostumeColorway = "Grey and Yellow";
         break;
+    default:
+        printf("I don't understand what you enter. You will be wearing a Black and Blue costume.\n");
     }
     printf("What is your choice of weapon?\n");
     printf("1 = Sword | 2 = Bow \n");
@@ -91,8 +100,8 @@ void customizePlayer(char *str)
         break;
     }
 
-    printf("You have a %s build with %s hair. \n You are wearing a %s %s costume\n", player[locationOfPlayer].Build, player[locationOfPlayer].Haircolor, player[locationOfPlayer].CostumeColorway, player[locationOfPlayer].Costume);
-    printf("You will persuing the role as a(n) %s \n", player[0].Background);
+    printf("You have a %s build with %s hair.\n You are wearing a %s %s costume\n", player[locationOfPlayer].Build, player[locationOfPlayer].Haircolor, player[locationOfPlayer].CostumeColorway, player[locationOfPlayer].Costume);
+    printf("You weapon will be a %s \n", player[0].Background);
     sleep(1);
 
     strcpy(str, player[0].Background);
